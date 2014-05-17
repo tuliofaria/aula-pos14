@@ -29,5 +29,11 @@
 				header("Location: ?controller=Cd&action=listar");
 			}
 		}
+		public function excluir(){
+			$cdDAO = new CdDAO();
+			$cdDAO->delete($_GET["id"]);
+			header("Location: ?controller=Cd&action=listar");
+			exit;
+		}
 
 	}

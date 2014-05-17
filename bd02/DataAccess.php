@@ -15,9 +15,15 @@
 			$this->db = mysql_select_db($config["database"], $this->conn);
 		}
 
-		public function query(){
+		public function query($conditions = array()){
 			$table = $this->table;
-			$query = mysql_query("select * from ".$table, $this->conn);
+
+			$whereStr = " 1=1 ";
+			foreach($conditions as $field=>$c){
+				$whereStr.=" and ".$field." = '".$c."' ";
+			}
+
+			$query = mysql_query("select * from ".$table." where ".$whereStr, $this->conn);
 			$retorno = array();
 			while($dados = mysql_fetch_array($query)){
 				$retorno[] = $dados;
