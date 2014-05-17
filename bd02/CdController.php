@@ -36,4 +36,21 @@
 			exit;
 		}
 
+		public function editar(){
+			$cdDAO = new CdDAO();
+			if(isset($_POST["titel"])){
+				$cdDAO->update($_GET["id"],
+					array(
+						"titel"=>$_POST["titel"],
+						"interpret"=>$_POST["interpret"],
+						)
+				);
+
+				header("Location: ?controller=Cd&action=listar");
+			}else{
+				$dados = $cdDAO->query(array("id"=>$_GET["id"]));
+				$this->setVar("cd", $dados[0]);
+			}
+		}
+
 	}

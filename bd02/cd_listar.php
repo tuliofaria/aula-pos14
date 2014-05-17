@@ -8,6 +8,8 @@ $registros =
 	<li><?php echo $r["titel"] ?> 
 		<a href="?controller=Cd&action=excluir&id=<?php echo $r["id"] ?>">
 			excluir</a>
+	 | <a href="?controller=Cd&action=editar&id=<?php echo $r["id"] ?>">
+			editar</a>
 	</li>
 	<?php } ?>
 </ul>
