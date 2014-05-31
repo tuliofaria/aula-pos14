@@ -10,12 +10,56 @@
 		$newWidth = $sizes[0]*0.5;
 		$newHeight = $sizes[1]*0.5;
 
+		$altura = $sizes[1];
+		$largura = $sizes[0];
+
 		// 250x120
 
-		$img1 = imagecreatefromjpeg($filename);
-		$img2 = imagecreatetruecolor($newWidth, $newHeight);
+		// 1024 x 768
 
-		imagecopyresized($img2, $img1, 0, 0, 0, 0, $newWidth, $newHeight, $sizes[0], $sizes[1]);
+		function calc1($largura, $altura){
+			$ratio = $largura/$altura;
+			if($ratio<1){
+				$newHeight = 120;
+				$newWidth = 120*$ratio;
+			}else{
+				$newWidth = 250;
+				$newHeight = 250*$ratio;
+			}
+			if($newHeight>120){
+				$newHeight = 120;
+				$newWidth = $newHeight*$ratio;
+			}
+
+			if($newWidth>250){
+				$newWidth = 250;
+				$newHeight = $newWidth*$ratio;
+			}
+			//echo "Calc1:".$newWidth."x".$newHeight."<br>";
+			return array("w"=>$newWidth, "h"=>$newHeight);
+		}
+
+		function calc2($largura, $altura){
+			$ratio1 = $largura/250;
+			$ratio2 = $altura/120;
+
+			$ratio = $ratio1;
+			if($ratio2>$ratio1){
+				$ratio = $ratio2;
+			}
+
+			$newHeight = $altura/$ratio;
+			$newWidth = $largura/$ratio;
+			//echo "Calc2:".$newWidth."x".$newHeight."<br>";
+			return array("w"=>$newWidth, "h"=>$newHeight);
+		}
+
+		$novos = calc1($largura, $altura);
+
+		$img1 = imagecreatefromjpeg($filename);
+		$img2 = imagecreatetruecolor($novos["w"], $novos["h"]);
+
+		imagecopyresized($img2, $img1, 0, 0, 0, 0, $novos["w"], $novos["h"], $sizes[0], $sizes[1]);
 
 		//Header("content-type: image/jpeg");
 		//imagejpeg($img2);
@@ -29,7 +73,7 @@
 
 		//print_r($sizes);
 
-
+		header("Location: index.php");
 
 
 	}

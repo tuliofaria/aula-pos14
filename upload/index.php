@@ -14,8 +14,12 @@
 			if (is_dir($dir)) {
 			    if ($dh = opendir($dir)) {
 			        while (($file = readdir($dh)) !== false) {
-			        	if(($file!=".")&&($file!="..")){
+			        	if(($file!=".")&&($file!="..")&&(!preg_match('/.*_thumb.jpg/', $file))){
 			        	?>
+			        	<? $filenameThumb = str_replace(".jpg", "_thumb.jpg", $file); ?>
+			        	<? if(is_file("arquivos/".$filenameThumb)){ ?>
+			        	<img src="arquivos/<? echo $filenameThumb ?>" /><br>
+			        	<? } ?>
 			            <? echo $file; ?>
 
 			            <a href="excluir.php?file=<? echo urlencode($file) ?>">excluir</a> <br>
