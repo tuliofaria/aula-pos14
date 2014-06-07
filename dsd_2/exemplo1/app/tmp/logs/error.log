@@ -1,0 +1,170 @@
+2014-06-07 12:09:26 Error: [MissingControllerException] Controller class Teste.jpgController could not be found.
+Exception Attributes: array (
+  'class' => 'Teste.jpgController',
+  'plugin' => NULL,
+)
+Request URL: /aula02/dsd_2/exemplo1/teste.jpg
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-07 09:35:48 Error: [MissingActionException] Action AlunosController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'index',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 09:35:59 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'user\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Datasource\DboSource.php(260): Mysql->connect()
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(3479): ConnectionManager::getDataSource('default')
+#3 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(1128): Model->setDataSource('default')
+#4 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(3501): Model->setSource('alunos')
+#5 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(1357): Model->getDataSource()
+#6 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(1449): Model->schema()
+#7 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(1436): Model->hasField('title', false)
+#8 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Model\Model.php(880): Model->hasField(Array)
+#9 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Scaffold.php(132): Model->__get('displayField')
+#10 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(535): Scaffold->__construct(Object(AlunosController), Object(CakeRequest))
+#11 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
+#12 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#13 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#14 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-06-07 09:40:24 Error: [MissingActionException] Action AlunosController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'index',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 09:41:04 Error: [MissingViewException] View file "D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\View\Alunos\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\xampp\\htdocs\\aula02\\dsd_2\\exemplo1\\app\\View\\Alunos\\index.ctp',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#4 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-07 10:13:12 Error: [MissingActionException] Action AlunosController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'css',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/css/bootstrap.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 10:13:12 Error: [MissingActionException] Action AlunosController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'js',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/js/bootstrap.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 10:14:34 Error: [MissingActionException] Action AlunosController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'js',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/js/bootstrap.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 11:21:11 Error: [MissingActionException] Action AlunosController::novo() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'novo',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/novo
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 11:21:35 Error: [MissingViewException] View file "D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\View\Alunos\novo.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\xampp\\htdocs\\aula02\\dsd_2\\exemplo1\\app\\View\\Alunos\\novo.ctp',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/novo
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#4 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-07 11:51:33 Error: [MissingActionException] Action AlunosController::excluir() could not be found.
+Exception Attributes: array (
+  'controller' => 'AlunosController',
+  'action' => 'excluir',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/excluir/1
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-06-07 11:52:01 Error: [MissingViewException] View file "D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\View\Alunos\excluir.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\xampp\\htdocs\\aula02\\dsd_2\\exemplo1\\app\\View\\Alunos\\excluir.ctp',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/excluir/1
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#4 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-07 11:52:53 Error: [MissingViewException] View file "D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\View\Alunos\excluir.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\xampp\\htdocs\\aula02\\dsd_2\\exemplo1\\app\\View\\Alunos\\excluir.ctp',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/excluir/1
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#4 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-06-07 11:53:02 Error: [MissingViewException] View file "D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\View\Alunos\excluir.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'D:\\xampp\\htdocs\\aula02\\dsd_2\\exemplo1\\app\\View\\Alunos\\excluir.ctp',
+)
+Request URL: /aula02/dsd_2/exemplo1/alunos/excluir/7
+Stack Trace:
+#0 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\View\View.php(468): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#3 D:\xampp\htdocs\aula02\dsd_2\exemplo1\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(AlunosController), Object(CakeRequest))
+#4 D:\xampp\htdocs\aula02\dsd_2\exemplo1\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
