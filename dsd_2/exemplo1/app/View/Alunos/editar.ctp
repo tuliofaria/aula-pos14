@@ -1,4 +1,4 @@
-<h1>Novo aluno</h1>
+<h1>Alterar aluno</h1>
 
 <?php echo $this->Form->create('Aluno', array(
 	'inputDefaults' => array(
@@ -8,7 +8,6 @@
 	),
 	'class' => 'well'
 )); ?>
-
 	<? echo $this->Form->input("nome") ?>
 	<? echo $this->Form->input("email") ?>
 	<? echo $this->Form->input("cidade_id") ?>

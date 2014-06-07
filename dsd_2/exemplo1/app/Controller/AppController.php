@@ -31,4 +31,22 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
+	public $helpers = array(
+		'Session',
+		'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
+		'Form' => array('className' => 'BoostCake.BoostCakeForm'),
+		'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),
+	);
+
+
+	public function beforeFilter(){
+		if($this->params->prefix == "admin"){
+			$this->layout = "default_admin";
+			if(!$this->Session->check("logado")){
+				$this->redirect("/usuarios/login");
+			}
+		}
+	}
+
 }
